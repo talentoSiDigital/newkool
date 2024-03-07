@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+
+@font-face {
+    font-family: "Newkool";
+    font-weight: 400;
+    src: url(/fonts/Digital-Sans-EF-Bold-Italic.ttf);
+}
