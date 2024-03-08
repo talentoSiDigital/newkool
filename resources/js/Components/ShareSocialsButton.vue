@@ -18,10 +18,10 @@ const socialsLinks = {
 
 
     },
-    "pinterest": {
-        "link": "http://pinterest.com/pin/create/button/?url=",
+    "instagram": {
+        "link": "http://instagram.com/",
 
-        "icon": "pinterest"
+        "icon": "instagram"
 
     },
 

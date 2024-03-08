@@ -3,7 +3,7 @@ import { Head, Link } from '@inertiajs/vue3';
 
 import MainTemplate from '../Layouts/MainTemplate.vue';
 defineProps({
-    cities: Array
+    cities: Object
 });
 
 

@@ -44,7 +44,7 @@ defineProps({
                     Conoce los estados <br> donde puedes adquirir <br>
                     <strong >nuestros productos.</strong>
                 </h2> 
-                <PrimaryButton path="/" class="ml-4 w-fit">
+                <PrimaryButton path="/donde-encontrarnos" class="ml-4 w-fit">
                     Ver más
                 </PrimaryButton>
             </header>

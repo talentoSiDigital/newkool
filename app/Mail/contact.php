@@ -65,7 +65,7 @@ class contact extends Mailable
     public function build(){
         return $this->view('mail')
                     ->subject('Nuevo Mensaje')
-                    ->from('mzorrilla.sidigital@gmail.com')
+                    ->from('tecnologia@newkoolamerica.com')
                     ->with('data',$this->data);
     }
 }

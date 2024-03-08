@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\contact;
 
 class NewkoolContactsController extends Controller
-{
+{ 
 
     
     public function submit(Request $request){
@@ -33,12 +33,9 @@ class NewkoolContactsController extends Controller
             Mail::to("mzorrilla.sidigital@gmail.com")->send(new contact($data));
 
 
-            return to_route('contacto',[
-                 'message'=>'Mensaje enviado con exito'
-            ]);
-        // return Inertia::render('Contact',[
-        //     'message'=>'Mensaje enviado con exito'
-        // ]);
+        return Inertia::render('Contact',[
+            'message'=>'Mensaje enviado con exito'
+        ]);
     }
     
 

@@ -16,6 +16,11 @@ defineProps({
 
 
 const breakpoints = {
+    350:{  
+        itemsToShow: 1,
+        snapAlign: 'center',
+        autoplay:2000
+    },
     // 700px and up
     700: {
         itemsToShow: 2,
@@ -45,22 +50,23 @@ function getTableContent(item, char) {
             <div class="h-fit flex justify-center my-8">
                 <div class=" rounded-md border-2 bg-white p-4  w-11/12 h-fit lg:h-2/5 flex flex-col lg:flex-row items-center   ">
 
-                    <div class="  overflow-hidden w-full lg:w-4/5 flex flex-col items-center justify-center group">
+                    <div class="overflow-hidden md:overflow-visible  w-full lg:w-4/5 flex flex-col items-center justify-center group">
                         <img :src="`/assets/products-images/${product[0].code}.jpg`" :alt="product.type"
-                            class="w-1/3 rounded-lg duration-200 hover:scale-110 relative z-0">
-                             <h2 class="font-bold text-center relative z-10">Compartir en:</h2>
-                            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-2 relative z-20">
+                            class="w-1/3 rounded-lg duration-200 scale-125 relative z-0 mb-10">
+
+                             <h2 class="font-bold text-center relative z-10 mt-4">Compartir en:</h2>
+                            <div class="flex flex-row justify-center items-center gap-4 mt-2 relative z-20">
                                 <ShareSocialsButton social="facebook" />
                                 <ShareSocialsButton social="x" />
-                                <ShareSocialsButton social="pinterest" />
+                                <ShareSocialsButton social="instagram" />
                             </div>
                     </div>
 
                     <aside
                         class="h-[75vh] rounded-md w-full  lg:w-1/3 flex flex-col items-center justify-center  mx-4">
-                        <header class=" sm:w-1/2 md:w-1/3  lg:w-10/12">
+                        <header class=" sm:w-1/2 md:w-full  lg:w-10/12">
                             <h2
-                                class="font-newkool rounded-md border border-black p-2  text-xl md:text-3xl text-newkool-red text-center">
+                                class="font-newkool rounded-md border border-black p-2 w-full text-2xl md:text-3xl text-newkool-red text-center">
                                 {{ product[0].type }}</h2>
                             <p class="font-light text-gray-500 text-sm py-4">Modelo: {{ product[0].code }}</p>
                             <ul class=" border border-black rounded-md overflow-hidden">
@@ -68,7 +74,7 @@ function getTableContent(item, char) {
                                 <h2 class="text-newkool-red font-bold px-4 py-2">Caracteristicas</h2>
                                 <li v-for="(item,index) in getTableContent(product[0].description, ';')" :key="item"
                                     class=" w-full text-sm   ">
-                                   <p :class="[index % 2 == 0?'bg-slate-100':'bg-slate-50']" class="w-full px-6 py-1 "> {{ item }}</p>
+                                   <p :class="[index % 2 == 0?'bg-slate-200':'bg-slate-100']" class="w-full px-6 py-1 "> {{ item }}</p>
                                 </li>
 
 
@@ -87,9 +93,9 @@ function getTableContent(item, char) {
                 <div
                     class=" bg-white  w-11/12 h-2/5 flex flex-col items-center justify-center  rounded-xl pb-8">
                     <h2 class=" font-bold text-4xl pt-10 mb-10 text-newkool-red font-newkool ">Productos relacionados</h2>
-                    <Carousel :breakpoints="breakpoints">
-                        <Slide v-for="slide in slider " :key="slide" class="bg-white py-4 px-4">
-                            <div class="flex flex-col w-10/12 rounded-xl py- items-center gap-4 border border-gray-400 hover:scale-110 duration-200 shadow-lg py-4">
+                    <Carousel :breakpoints="breakpoints" class="w-full">
+                        <Slide v-for="slide in slider " :key="slide" class="bg-white py-4 px-4 w-1/2">
+                            <div class="flex flex-col w-full lg:w-10/12 rounded-xl py- items-center gap-4 border border-gray-400  lg:hover:scale-110 duration-200 shadow-lg py-4">
                                 <img :src="`/assets/products-images/${slide.code}.jpg`" :alt="slide.type" class="w-1/2 ">
                                 <header>
                                     <h2>{{ slide.name }}</h2>
@@ -104,7 +110,9 @@ function getTableContent(item, char) {
 
                         <template #addons>
 
-                            <Navigation />
+                            <div class="hidden md:block">
+                                <Navigation />
+                            </div>
                         </template>
                     </Carousel>
                 </div>

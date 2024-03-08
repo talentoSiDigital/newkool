@@ -57,10 +57,7 @@ function toggleNav() {
                                 Refrigeración</Link>
                                 <Link :href="'/'" class="whitespace-nowrap px-8 py-2 h-14 hover:underline  duration-200">
                                 Lavadoras</Link>
-                                <Link :href="'/'" class="whitespace-nowrap px-8 py-2 h-14 hover:underline  duration-200">
-                                Congeladores</Link>
-                                <Link :href="'/'" class="whitespace-nowrap px-8 py-2 h-14 hover:underline  duration-200">
-                                Vitrina</Link>
+                              
                             </div>
                         </div>
             
