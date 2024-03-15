@@ -37,7 +37,7 @@ function submit() {
             <title>Contacto</title>
             <meta name="description" content="Newkoolamerica.com">
         </Head>
-        <div class="flex h-16  w-full items-center justify-center fixed bottom-0 z-50">
+        <div v-if="message" class="flex h-16  w-full items-center justify-center fixed bottom-0 z-50">
             <h2 class="bg-gray-400 text-white rounded-t-md w-2/3 text-center h-full pt-5 animate-disapear fill-mode-forwards">
 
                 {{ message }}

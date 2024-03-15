@@ -30,7 +30,7 @@ function autoPlay() {
     sliderChanged(validator.value)
 }
 
-setInterval(autoPlay,4000)
+setInterval(autoPlay,8000)
 
 function update(type) {
     if (type == 1) {
@@ -70,9 +70,9 @@ const checkSlider2 = (item) => {
 
 const checkSlider3 = (item) => {
     if (item % 2 == 0) {
-        return sliderV.value[item] == true ? 'translate-y-0' : 'translate-y-full'
+        return sliderV.value[item] == true ? 'translate-y-0' : 'translate-y-full '
     } else {
-        return sliderV.value[item] == true ? 'translate-x-0' : 'translate-x-full'
+        return sliderV.value[item] == true ? 'translate-x-0 ' : 'translate-x-full'
 
     }
 }
@@ -82,7 +82,7 @@ const blinkCheck = ref(false)
 
 
 const blinker = computed(() => {
-    return blinkCheck.value == true ? 'translate-y-0' : '-translate-y-full'
+    return blinkCheck.value == true ? 'translate-y-0' : '-translate-y-full '
 })
 
 const checkSlider4 = (item) => {
@@ -303,10 +303,10 @@ function updateBlink(type) {
             </div>
         </div> -->
         <!-- Effect #3 -->
-        <div class=" w-full h-[85vh] flex items-center justify-center mt-10">
+        <div class=" w-full h-[85vh] 2xl:h-[50vh]  flex items-center justify-center mt-10">
             <div
                 class="flex relative items-center justify-start border w-11/12 border-black h-full overflow-hidden bg-newkool-red">
-                <div class="absolute z-10 left-4 cursor-pointer" @click="update(-1)">
+                <div class="absolute z-20 left-4 cursor-pointer" @click="update(-1)">
                     <font-awesome-icon :icon="['fas', 'caret-left']"
                         class="text-3xl text-newkool-red hover:text-white duration-200 hover:bg-newkool-red p-3 rounded-lg" />
                 </div>
@@ -322,11 +322,11 @@ function updateBlink(type) {
                             VER MÁS
                         </PrimaryButton>
                     </div>
-                    <img src="/assets/banner-images/banner-nevera-white.png" alt="lavadora">
+                    <img class="2xl:w-[200vw]" src="/assets/banner-images/banner-nevera-white.png" alt="lavadora" >
                 </div>
 
                 <div class="absolute w- duration-500" :class="checkSlider3(3)">
-                    <div class="absolute z-0 flex flex-col w-full h-full   items-center text-right justify-center right-20">
+                    <div class="absolute z-0 flex flex-col w-full h-full   items-center text-right 2xl:text-center justify-center right-20">
                         <h2 class="text-gray-600 font-light text-4xl  w-1/3">Nuestras</h2>
                         <h2 class="text-gray-700 text-8xl font-extrabold w-1/3">Lavadoras</h2>
                         <p class="w-1/3 text-gray-600 text-xl text-right ">Dile adios a las manchas y hola a la frescura con
@@ -338,7 +338,7 @@ function updateBlink(type) {
                             </Link>
                         </div>
                     </div>
-                    <img src="/assets/banner-images/banner-lavadora-white.png" alt="contacto">
+                    <img class="2xl:w-[200vw]" src="/assets/banner-images/banner-lavadora-white.png" alt="contacto">
                 </div>
 
                 <div class="absolute w-full duration-500" :class="checkSlider3(2)">
@@ -351,7 +351,7 @@ function updateBlink(type) {
                             VER MÁS
                         </PrimaryButton>
                     </div>
-                    <img src="/assets/banner-images/banner-nevera-black.png" alt="contacto">
+                    <img class="2xl:w-[200vw]" src="/assets/banner-images/banner-nevera-black.png" alt="contacto">
                 </div>
 
                 <div class="absolute w-full duration-500" :class="checkSlider3(1)">
@@ -364,11 +364,11 @@ function updateBlink(type) {
                             CONTACTANOS
                         </PrimaryButton>
                     </div>
-                    <img src="/assets/banner-images/banner-marca-newkool.png" alt="neveras-newkool">
+                    <img class="2xl:w-[200vw]" src="/assets/banner-images/banner-marca-newkool.png" alt="neveras-newkool">
                 </div>
 
                 <div class="absolute w-full  duration-500" :class="checkSlider3(0)">
-                    <div class="absolute z-0 flex flex-col w-full h-full items-end justify-center right-16">
+                    <div class="absolute z-10 flex flex-col w-full h-full items-end justify-center right-16">
                         <h2 class="text-gray-600 font-light text-5xl">Hacemos de tu</h2>
                         <h2 class="text-newkool-red text-8xl font-extrabold my-2">Hogar</h2>
                         <h2 class="text-gray-600 font-light text-5xl">Tu lugar favorito</h2>
@@ -378,7 +378,7 @@ function updateBlink(type) {
                             VER MÁS
                         </PrimaryButton>
                     </div>
-                    <img src="/assets/banner-images/banner-lavadora-black.png" alt="lavadora">
+                    <img class="2xl:w-[200vw]" src="/assets/banner-images/banner-lavadora-black.png" alt="lavadora">
                 </div>
 
 
@@ -392,6 +392,7 @@ function updateBlink(type) {
 
             </div>
         </div>
+        
 
         <!-- Effect #4 -->
         <!-- <div class=" w-full h-[85vh] flex items-center justify-center mt-10">

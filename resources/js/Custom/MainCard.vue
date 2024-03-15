@@ -23,7 +23,7 @@ const imgSrc = {
 
 <template>
     <div class=" w-[280px] group bg-gray-100 h-[360px] py-10 flex flex-col gap-8 items-center justify-evenly rounded-xl overflow-hidden">
-        <h2 class=" text-3xl text-center  font-semibold">{{imgSrc[title].title}}</h2>
+        <h2 class=" text-3xl text-center  font-semibold text-newkool-red">{{imgSrc[title].title}}</h2>
         <div class="h-1/2 w-full my-4 flex items-center justify-center">
             <img class="max-w-28 " :src="`/assets/route-images/home/${imgSrc[title].src}`" :alt="title">
         </div>

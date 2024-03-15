@@ -4,8 +4,10 @@ import { Head, Link } from '@inertiajs/vue3';
 import MainTemplate from '../Layouts/MainTemplate.vue';
 
 import MainSlider from '../Custom/MainSlider.vue';
+import MobileSlider from '../Custom/MobileSlider.vue';
 import MainCard from '../Custom/MainCard.vue';
 import PrimaryButton from '../Components/PrimaryButton.vue'
+
 
 defineProps({
     canLogin: Boolean,
@@ -16,15 +18,25 @@ defineProps({
 </script>
 
 <template>
-    <MainTemplate >
+    <MainTemplate>
 
         <Head>
             <title>Newkool America</title>
             <meta name="description" content="Newkoolamerica.com">
         </Head>
 
+       
 
-        <MainSlider class="hidden md:block"/>
+
+
+
+        <MainSlider class="hidden lg:block" />
+        <MobileSlider class="block md:hidden" />
+
+
+        <div class="flex items-center justify-center lg:hidden">
+            <img src="/assets/banner-images/banner-test.png" alt="">
+        </div>
         <h2 class="text-center text-gray-600 mt-10 font-bold text-4xl ">Productos</h2>
         <div class="h-fit flex flex-col gap-10 md:gap-0 md:flex-row justify-evenly items-center my-16">
             <MainCard title="refrigeracion" />
@@ -35,28 +47,29 @@ defineProps({
         <div class="flex justify-center">
             <hr class="border-black w-11/12">
         </div>
-        
-        
+
+
         <div class="flex flex-col md:flex-row items-center justify-center h-fit py-36 gap-8">
             <img class="w-2/3 md:w-1/3" src="/assets/route-images/home/mapa-completo.png" alt="mapa-de-venezuela">
-            <header class="h-fit flex flex-col items-center" >
-                <h2 class="my-4 text-3xl text-center">
+            <header class="h-fit flex flex-col items-center">
+                <h2 class="my-4 text-3xl text-center text-newkool-red">
                     Conoce los estados <br> donde puedes adquirir <br>
-                    <strong >nuestros productos.</strong>
-                </h2> 
-                <PrimaryButton path="/donde-encontrarnos" class="ml-4 w-fit">
+                    <strong>nuestros productos.</strong>
+                </h2>
+                <PrimaryButton path="/donde-encontrarnos" class="ml-4 
+                w-fit">
                     Ver más
                 </PrimaryButton>
             </header>
         </div>
-        
+
         <div class="flex justify-center">
             <hr class="border-black w-11/12">
         </div>
         <div class="h-24 flex items-center justify-center text-gray-400 font-bold text-xl">
             <h2 class="w-11/12">Newkool - Todos los derechos reservados 2024</h2>
 
-        </div>    
+        </div>
 
 
     </MainTemplate>

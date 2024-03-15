@@ -30,7 +30,7 @@ class NewkoolContactsController extends Controller
                 'message'=> $request->all()["_value"]['message']
             ];
 
-            Mail::to("mzorrilla.sidigital@gmail.com")->send(new contact($data));
+            Mail::to("serviciotecnico@newkoolamerica.com")->send(new contact($data));
 
 
         return Inertia::render('Contact',[

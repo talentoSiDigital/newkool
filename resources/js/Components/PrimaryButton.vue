@@ -8,7 +8,7 @@ defineProps({
 
 <template>
     <Link :href="path"
-        class=" text-lg px-5 mt-4  border-newkool-red border bg-newkool-red text-white hover:text-newkool-red hover:bg-white duration-300 rounded-3xl ">
+        class="text-sm md:text-lg px-5 mt-4  border-newkool-red border bg-newkool-red text-white hover:text-newkool-red hover:bg-white duration-300 rounded-3xl ">
         <slot></slot>
     </Link>
 </template>
