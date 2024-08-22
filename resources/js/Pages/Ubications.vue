@@ -7,7 +7,6 @@ defineProps({
 });
 
 
-
 function deleteSpecialChars(string) {
     // used to remove accents and special characters
     return string.normalize('NFD')
@@ -45,7 +44,7 @@ function getImage(string) {
                 <div class="w-fit flex h-full flex-col items-center justify-center">
                     <img :src="`/assets/route-images/estados/${getImage(deleteSpecialChars(city.estado))}`"
                         :alt="city.estado" class="w-1/2 group-hover:scale-110 duration-200 ease-in ">
-                    <p class="w-fit h-1/6">{{ deleteSpecialChars(city.estado) }}</p>
+                    <p class="w-fit h-1/6">{{ city.estado }}</p>
                 </div>
                 </Link>
 
