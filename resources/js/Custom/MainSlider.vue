@@ -303,7 +303,7 @@ function updateBlink(type) {
             </div>
         </div> -->
         <!-- Effect #3 -->
-        <div class=" w-full h-[85vh] 2xl:h-[50vh]  flex items-center justify-center mt-10">
+        <div class=" w-full h-[85vh] 2xl:h-[60vh]  flex items-center justify-center mt-10">
             <div
                 class="flex relative items-center justify-start border w-11/12 border-black h-full overflow-hidden bg-newkool-red">
                 <div class="absolute z-20 left-4 cursor-pointer" @click="update(-1)">
