@@ -5,7 +5,7 @@
 <template>
     <footer
         class="h-fit lg:h-24 py-10 gap-6 flex flex-col md:flex-row items-center justify-around bg-newkool-red text-white relative z-50">
-        <div class="flex flex-col md:flex-row items-center gap-5 w-full md:w-1/2 ">
+        <div class="flex flex-col lg:flex-row items-center gap-5 w-full md:w-1/2 ">
             <div class="flex gap-2">
                 <font-awesome-icon :icon="['fas', 'envelope']" class="text-2xl fill-white" />
 
@@ -26,7 +26,7 @@
 
 
 
-        <div class="flex flex-col md:flex-row justify-around  w-1/2 md:w-1/5 items-center">
+        <div class="flex flex-col lg:flex-row justify-around  w-1/2 md:w-1/5 items-center">
 
             <h2 class="font-semibold text-xl">Síguenos en:</h2>
             <div class="flex justify-around  w-full md:w-1/2 items-center">

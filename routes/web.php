@@ -58,3 +58,8 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+
+Route::fallback(function () {
+    return Inertia::render('404View');
+});

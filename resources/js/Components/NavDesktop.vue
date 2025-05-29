@@ -36,10 +36,7 @@ import ApplicationLogo from '../Components/ApplicationLogo.vue';
                     Refrigeración</Link>
                     <Link :href="'/linea-blanca/Lavadoras'" class="whitespace-nowrap px-8 py-2 hover:underline  duration-200">
                     Lavadoras</Link>
-                    <Link :href="'/linea-blanca/Congeladores'" class="whitespace-nowrap px-8 py-2 hover:underline  duration-200 ">
-                    Congeladores</Link>
-                    <Link :href="'/linea-blanca/Vitrina'" class="whitespace-nowrap px-8 py-2 hover:underline  duration-200">
-                    Vitrina</Link>
+                
                 </div>
             </div>
 

@@ -35,7 +35,7 @@ import VideoBanner from '../Custom/VideoBanner.vue';
 
                 </section>
                 <section class="w-full h-[60vh] mt-10 py-10 flex items-center justify-center">
-                    <div class="w-3/4 flex items-center justify-center gap-8">
+                    <div class="w-3/4 flex flex-col lg:flex-row items-center justify-center gap-8">
                         <header>
                             <h2 class="text-center text-2xl font-semibold text-newkool-red">Misión</h2>
                             <p class="text-justify text-gray-700">Mejorar la vida de nuestros clientes a través de

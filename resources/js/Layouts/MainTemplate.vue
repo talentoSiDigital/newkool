@@ -6,11 +6,11 @@ import Footer from '../Custom/Footer.vue';
 </script>
 
 <template>
-    <main class="font-roboto ">
+    <main class="font-roboto">
         <Navbar/>
         <slot></slot>
-        <Footer/> 
         
+        <Footer/> 
     </main>
 </template>
 

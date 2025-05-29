@@ -27,7 +27,7 @@ class NewkoolProductsController extends Controller
     }
     public function getDescription($name){
         $product = DB::table('newkool_products')->where('name', '=' , $name)->get();
-        $slider = DB::table('newkool_products')->get()->take(6)->random(6);
+        $slider = DB::table('newkool_products')->get()->random(6);
 
         return Inertia::render('Description',[
             'product' => $product,

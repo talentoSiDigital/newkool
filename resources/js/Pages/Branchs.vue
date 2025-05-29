@@ -5,8 +5,8 @@ import MainTemplate from '../Layouts/MainTemplate.vue';
 
 
 defineProps({
-    ubications: String,
-    cities: String
+    ubications: Array,
+    cities: Array
 });
 
 function instagramButton(name) {
@@ -36,11 +36,17 @@ function whatsappButton(name) {
             <div class="w-full md:w-4/6">
                 <div class="flex flex-col md:flex-row md:justify-between w-11/12">
                     <h2 class="text-2xl md:text-4xl">Listado de ciudades</h2>
-                    <Link :href="'/donde-encontrarnos'"
-                        class="flex justify-center gap-2 items-center bg-newkool-red text-white px-4 rounded-md border border-newkool-red duration-200 hover:bg-white hover:text-newkool-red">
-                    <font-awesome-icon :icon="['fas', 'arrow-left']" />
-                    <p>Volver </p>
-                    </Link>
+                    <div class="mt-2 group relative">
+                        <Link :href="'/donde-encontrarnos'"
+                            class="bg-newkool-red text-white flex items-center gap-2 py-2 px-6 rounded border border-newkool-red duration-200 hover:bg-white hover:text-newkool-red relative z-10 group-hover:-translate-x-1 group-hover:-translate-y-1  ">
+                        <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-2xl " />
+
+                        Volver
+                        </Link>
+                        <div class="bg-newkool-red w-full h-full absolute rounded top-0">
+
+                        </div>
+                    </div>
 
                 </div>
 
@@ -61,16 +67,17 @@ function whatsappButton(name) {
                                     <p>{{ place.razon_social }}</p>
                                 </div>
                                 <div class="w-full ">
-                                    <a v-if="place.instagram != 'No Disponible'" :href="instagramButton(place.instagram)"
+                                    <a v-if="place.instagram != 'No Disponible'"
+                                        :href="instagramButton(place.instagram)"
                                         class="text-gray-600 hover:underline hover:text-newkool-red" target="_blank">@{{
-                                            place.instagram }}</a>
+                            place.instagram }}</a>
                                     <p v-else>No Disponible</p>
                                 </div>
 
                                 <div class="w-full ">
                                     <a v-if="place.telefono != 'No Disponible'" :href="whatsappButton(place.telefono)"
                                         class="text-gray-600 hover:underline hover:text-newkool-red" target="_blank">{{
-                                            place.telefono }}</a>
+                            place.telefono }}</a>
                                     <p v-else>No Disponible</p>
                                 </div>
                             </div>
@@ -103,5 +110,3 @@ function whatsappButton(name) {
     transform: translateX(100%);
 }
 </style>
-
-

@@ -10,7 +10,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 defineProps({
     product: Array,
     slider: Array,
-    message:String
+    message: String
 });
 
 
@@ -19,12 +19,12 @@ const mail = ref({
     'email': null,
     'phone': null,
     'subject': null,
-    'message':null
+    'message': null
 })
 
 const name = ref(null)
 
-function submit(){
+function submit() {
     router.post('/contacto/send', mail)
 }
 
@@ -37,15 +37,19 @@ function submit(){
             <title>Contacto</title>
             <meta name="description" content="Newkoolamerica.com">
         </Head>
-        <div>
-            {{ message }}
+        <div v-if="message" class="flex h-16  w-full items-center justify-center fixed bottom-0 z-50">
+            <h2 class="bg-gray-400 text-white rounded-t-md w-2/3 text-center h-full pt-5 animate-disapear fill-mode-forwards">
+
+                {{ message }}
+            </h2>
         </div>
 
         <section class="relative">
             <img src="/assets/route-images/contacto-desktop.png" alt="contacto-banner" class="hidden md:block">
             <img src="/assets/route-images/contacto-mobile.png" alt="contacto-banner" class="block md:hidden">
             <a href="https://wa.link/xoi3do" target="_blank" class="group">
-                <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-9xl absolute top-[70%] left-[47%] group-hover:text-newkool-red text-gray-700 duration-200 " />
+                <font-awesome-icon :icon="['fab', 'whatsapp']"
+                    class="text-9xl absolute top-[70%] left-[47%] group-hover:text-newkool-red text-gray-700 duration-200 " />
 
             </a>
         </section>
@@ -54,7 +58,8 @@ function submit(){
             <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-newkool-red ">Contáctanos
                 </h2>
-                <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">Envíanos tu mensaje mediante el
+                <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">Envíanos tu mensaje mediante
+                    el
                     siguiente formulario. Tu opinion es importante para nosotros.
                 </p>
                 <form class="space-y-8" @submit.prevent="submit">
@@ -65,13 +70,15 @@ function submit(){
                             placeholder="Nombre" required v-model="mail.name">
                     </div>
                     <div>
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Dirección de correo</label>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Dirección de
+                            correo</label>
                         <input type="email" id="email"
                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-newkool-red focus:border-newkool-red block w-full p-2.5"
                             placeholder="ejemplo@ejemplo.com" required v-model="mail.email">
                     </div>
                     <div>
-                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 ">Número de Teléfono</label>
+                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 ">Número de
+                            Teléfono</label>
                         <input type="tel" id="phone"
                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-newkool-red focus:border-newkool-red block w-full p-2.5"
                             placeholder="212-000-0000" required v-model="mail.phone">
@@ -89,8 +96,16 @@ function submit(){
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-newkool-red focus:border-newkool-red "
                             placeholder="Deja tu comentario..." v-model="mail.message"></textarea>
                     </div>
-                    <button type="submit"
-                        class="bg-newkool-red py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 ">Enviar</button>
+                    <div class="mt-2 group relative w-fit">
+                        <button type="submit"
+                            class="bg-newkool-red text-white flex items-center gap-2 py-2 px-6 rounded border border-newkool-red duration-200 hover:bg-white hover:text-newkool-red relative z-10 group-hover:-translate-x-1 group-hover:-translate-y-1 ">
+
+                        Enviar
+                        </button>
+                        <div class="bg-newkool-red w-full h-full absolute rounded top-0">
+
+                        </div>
+                    </div>
                 </form>
             </div>
         </section>
@@ -101,5 +116,3 @@ function submit(){
 
 
 <style scoped></style>
-
-
