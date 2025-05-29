@@ -57,7 +57,6 @@ function getTableContent(item, char) {
                              <h2 class="font-bold text-center relative z-10 mt-4">Compartir en:</h2>
                             <div class="flex flex-row justify-center items-center gap-4 mt-2 relative z-20">
                                 <ShareSocialsButton social="facebook" />
-                                <ShareSocialsButton social="x" />
                                 <ShareSocialsButton social="instagram" />
                             </div>
                     </div>
@@ -71,7 +70,7 @@ function getTableContent(item, char) {
                             <p class="font-light text-gray-500 text-sm py-4">Modelo: {{ product[0].code }}</p>
                             <ul class=" border border-black rounded-md overflow-hidden">
 
-                                <h2 class="text-newkool-red font-bold px-4 py-2">Caracteristicas</h2>
+                                <h2 class="text-newkool-red font-bold px-4 py-2">Características</h2>
                                 <li v-for="(item,index) in getTableContent(product[0].description, ';')" :key="item"
                                     class=" w-full text-sm   ">
                                    <p :class="[index % 2 == 0?'bg-slate-200':'bg-slate-100']" class="w-full px-6 py-1 "> {{ item }}</p>
